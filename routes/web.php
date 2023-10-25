@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::controller(OrderController::class)->group(function () {
+   Route::get('/', function(){
+      $data = [
+         'name' => 'Luca',
+         'lastname' => 'Franzoi',
+         'age' => 25
+      ];
+      return view('home', $data);
+   });
+   Route::get('/about', function(){
+      $data = [
+         'name' => 'Luca',
+         'lastname' => 'Franzoi',
+         'age' => 25
+      ];
+      return view('about', $data);});
+   Route::get('/contacts', function(){
+      $data = [
+         'name' => 'Luca',
+         'lastname' => 'Franzoi',
+         'age' => 25
+      ];
+      return view('contacts', $data);});
 });
