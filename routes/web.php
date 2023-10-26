@@ -14,29 +14,29 @@ use App\Http\Controllers\OrderController;
 |
 */
 
+Route::get('/', function(){
+   $data = [
+      'name' => 'Luca',
+      'lastname' => 'Franzoi',
+      'age' => 25
+   ];
+   return view('home', $data);
+})->name('home');
 
+Route::get('/about', function(){
+   $data = [
+      'name' => 'Luca',
+      'lastname' => 'Franzoi',
+      'age' => 25
+   ];
+   return view('about', $data);
+})->name('about');
 
-Route::controller(OrderController::class)->group(function () {
-   Route::get('/', function(){
-      $data = [
-         'name' => 'Luca',
-         'lastname' => 'Franzoi',
-         'age' => 25
-      ];
-      return view('home', $data);
-   });
-   Route::get('/about', function(){
-      $data = [
-         'name' => 'Luca',
-         'lastname' => 'Franzoi',
-         'age' => 25
-      ];
-      return view('about', $data);});
-   Route::get('/contacts', function(){
-      $data = [
-         'name' => 'Luca',
-         'lastname' => 'Franzoi',
-         'age' => 25
-      ];
-      return view('contacts', $data);});
-});
+Route::get('/contacts', function(){
+   $data = [
+      'name' => 'Luca',
+      'lastname' => 'Franzoi',
+      'age' => 25
+   ];
+   return view('contacts', $data);
+})->name('contacts');

@@ -13,13 +13,9 @@
       <div class="container">
          <div class="collapse navbar-collapse" id="navbarID">
             <div class="navbar-nav">
-               <a class="nav-link active" aria-current="page" href="/">Home</a>
-            </div>
-            <div class="navbar-nav">
-               <a class="nav-link" aria-current="page" href="/about">About</a>
-            </div>
-            <div class="navbar-nav">
-               <a class="nav-link" aria-current="page" href="/contacts">Contacts</a>
+               <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+               <a class="nav-link" aria-current="page" href="{{route('about')}}">About</a>
+               <a class="nav-link" aria-current="page" href="{{route('contacts')}}">Contacts</a>
             </div>
          </div>
       </div>
